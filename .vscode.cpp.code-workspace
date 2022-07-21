@@ -35,4 +35,14 @@ if 'python' in content:
 else:
     print("Python is not present")
 #program to check that in which line the word is present
-
+#PROGRAM TO CHECK THAT TWO FILES ARE SAME OR NOT FILE
+file1="jjj.txt"
+file2="copy.txt"
+with open(file1) as f:
+    f1 = f.read()
+with open(file2) as f:
+    f2= f.read()
+if f1  == f2:
+    print("file are same") 
+else:
+    print("file are not same")
