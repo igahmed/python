@@ -1,4 +1,4 @@
-def game():
+'''def game():
     return 5670
 score = game()
 with open('highscore.txt') as f:
@@ -7,3 +7,7 @@ with open('highscore.txt') as f:
 if highscore<score:
     with open('highscore.txt','w') as f:
         f.write(str(score))
+for i in range(2,21):
+    with open(f"highscore.txt{i}",'w') as f:
+        for j in range(1,11):
+            f.write(f"{j}X{i}={i*j}\n")'''
