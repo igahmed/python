@@ -46,3 +46,15 @@ if f1  == f2:
     print("file are same") 
 else:
     print("file are not same")
+#PROGRAM TO DELETE THE CONTENT OF THE FILE
+with open('jjj.txt','w') as f:
+    f.write(" ")
+#PROGRAM TO CREATE NEW FILE AND TO REMOVE OLD FILE (RENAME)
+import os
+oldname="copy.txt"
+newname="name_changed_by_pyhton"
+with open(oldname) as f:
+    f.read()
+with open(newname,'w') as f:
+    f.write("Hello world")
+os.remove(oldname)    
