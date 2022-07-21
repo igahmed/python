@@ -1,3 +1,4 @@
+#program to replace score
 '''def game():
     return 5670
 score = game()
@@ -7,7 +8,15 @@ with open('highscore.txt') as f:
 if highscore<score:
     with open('highscore.txt','w') as f:
         f.write(str(score))
+#;program to file for 20 tables
 for i in range(2,21):
     with open(f"table/table_multiplication_of_{i}.txt",'w') as f:
         for j in range(1,11):
             f.write(f"{i}X{j}={i*j}\n")
+#progrom to remove word from a file
+with open('jjj.txt') as f:
+    content = f.read()
+content= content.replace('word you want to replace','########')
+with open('jjj.txt','w') as f:
+     f.write(content)
+
