@@ -19,4 +19,11 @@ with open('jjj.txt') as f:
 content= content.replace('word you want to replace','########')
 with open('jjj.txt','w') as f:
      f.write(content)
-
+#program to rplace list from the file
+word = ["donke","motai","jahil"]
+with open('jjj.txt') as f:
+    content = f.read()
+for word in word:
+    content= content.replace(word,'########')
+with open('jjj.txt','w') as f:
+     f.write(content)
