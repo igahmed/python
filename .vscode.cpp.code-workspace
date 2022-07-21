@@ -27,3 +27,12 @@ for word in word:
     content= content.replace(word,'########')
 with open('jjj.txt','w') as f:
      f.write(content)
+#program to check if a word is present in a file
+with open('jjj.txt') as f:
+    content = f.read()
+if 'python' in content:
+    print("Python is present")
+else:
+    print("Python is not present")
+#program to check that in which line the word is present
+
