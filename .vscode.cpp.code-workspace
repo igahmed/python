@@ -58,3 +58,42 @@ with open(oldname) as f:
 with open(newname,'w') as f:
     f.write("Hello world")
 os.remove(oldname)    
+#OBJECT ORIENTED PRACTICE
+class Calculator:
+    def __init__(self,num):
+         self.num = num
+         pass
+    def sequare(self):
+            print(f"The square of the {self.num} is {self.num **2}")
+    def squareroot (self): 
+          print(f"The squareroot of {self.num} is {self.num **0.5}")
+    def cube(self):
+          print(f"The cube of {self.num} is {self.num **3}")
+a = Calculator(16)
+a.sequare()
+a.squareroot()
+a.cube()
+#PROGRAM TO BOOOK SEATS
+class Train:
+    def __init__(self,name,fare,seats):
+        self.name  = name
+        self.fare  = fare
+        self.seats = seats
+    def getStatus(self):
+        print(f"The name of the train is {self.name}")
+        print(f"The seats of the train are{self.seats}")
+    def fareInfo(self):
+        print(f"The fare of the train is {self.fare}")
+    def bookTicket(self):
+        if(self.seats>0):
+            print(f"Your ticket has been booked your seat number is{self.seats}")
+            self.seats= self.seats-1
+        else:
+            print("Sorry train is full")
+intercity = Train("Intercity Express:14014",90,1)
+intercity.fareInfo()
+intercity.getStatus()
+intercity.bookTicket()
+intercity.bookTicket()
+intercity.getStatus()
+                 
