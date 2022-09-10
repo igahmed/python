@@ -96,4 +96,45 @@ intercity.getStatus()
 intercity.bookTicket()
 intercity.bookTicket()
 intercity.getStatus()
-                 
+#OOPS
+a = input()
+class Train:
+    def __init__(self,Train,TrainNumber,Timing,date,day,station,country,city,ticket,seats,price):
+        self.Train = Train
+        self.TrainNumber = TrainNumber
+        self.Timing = Timing
+        self.date = date
+        self.day = day
+        self.station = station
+        self.country = country
+        self.city = city
+        self.ticket = ticket
+        self.seats = seats
+        self.price = price
+    def trainInformation(self):
+        print("--------------------------------------------------------------------------------")
+        print(f"The country is {self.country}")
+        print(f"The city is {self.city}")
+        print(f"The number of the train is {self.TrainNumber}")
+        print(f"Total seats in train is {self.seats}")
+        print(f"Ticket price is {self.price}")
+        print(f"Timing of the train is {self.Timing}  \n Date:{self.date} \n Day:{self.day}")
+        print("--------------------------------------------------------------------------------")
+    def forTicket(self):
+        if self.seats == 255:
+            print("Trian is full ")
+        elif self.seats < 255:
+            print("you can book Ticket by typing yes")
+            b = input("Type yes for booking ticket")
+            if "yes" in b :
+                    print(f"Your seat is booked ")
+                    print(f"Your seat number is {self.seats}")
+                    print(f"Remaining seat is {self.seats - 1}")
+        if "yes" in b:
+            self.seats = self.seats - 1       
+    
+
+t = Train(2,1050,"10:00 pm" ,"6 AUG", "Saturday",8,"PAKISTAN","KARACHI",0,25,2400)
+t.trainInformation()
+t.forTicket()
+t.trainInformation()
